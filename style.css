@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*,
+*::after,
+*::before{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+:active,
+:hover,
+:focus{
+    outline: none !important;
+    outline-offset: 0;
+}
+a,
+a:hover{
+    text-decoration: none;
+}
+a:hover{
+    color: #fd8eaf !important;
+}
+ul,
+ol{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary-color:#fd8eaf;
+    --white-text-color:#fff;
+    --text-color:#9e9999;
+    --black-color:#0000;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'ubuntu',sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+}
+/* =====================================
+          custom scrollbar
+===================================== */
+::-webkit-scrollbar{
+    width: 0.625rem;
+}
+::-webkit-scrollbar-track{
+    background: #fff;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+}
+
+/* =====================================
+          custom css
+===================================== */
+h1{
+    font-size: 6.25rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+h1 span{
+    color: white;
+}
+h2{
+    font-weight: 700;
+    font-size: 2.187rem;
+    position: relative;
+    text-transform: capitalize;
+    color: black;
+    line-height: 3.7rem;
+}
+h2::before{
+    background: #fd8eaf;
+    border-radius: 0.3125rem;
+    content: "";
+    position: absolute;
+    top: -1.5625rem;
+    left: 0;
+    width: 1.875rem;
+    height: 0.3125rem;
+}
+h4{
+    font-weight: 900;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    margin-bottom: 0.9375rem;
+    color:black;
+    transition: all .3s linear;
+    padding-top: 15px;
+}
+h5{
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: var(--primary-color);
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    color: var(--black-color);
+    transition: all .3s linear;
+}
+p{
+    font-size: 1.125rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.725rem;
+    letter-spacing: 0.06rem;
+}
+.main-btn{
+    width: 9.375rem;
+    height: 3.125rem;
+    border: 0.063rem solid var(--primary-color);
+    color: black;
+    font-size: 1.125rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 0.5s;
+
+}
+.main-btn::before, .main-btn::after{
+    position: absolute;
+    background: white;
+    z-index: -1;
+    transition: 0.5s;
+    content: "";
+}
+.main-btn::before{
+    height: 3.125rem;
+    width: 8.125rem;
+}
+.main-btn::after{
+    width: 9.375rem;
+    height: 1.85rem;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    
+    user-select: none;
+}
+.main-btn:hover::before{
+    width: 0px;
+    background: #fff;
+}
+.main-btn:hover::after{
+    width: 0px;
+    background: #fff;
+}
+.main-btn:hover{
+    background: #fff;
+    color: #fd8eaf;
+}
+.wrapper{
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+}
+.text-content{
+    width: 60%;
+    margin: auto;
+}
+
+/* =====================================
+          Header design
+===================================== */
+.navigation-wrap{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+
+}
+.navigation-wrap .nav-item{
+    padding: 0 0.5rem;
+    transition: all 0.2s linear;
+}
+.navbar-toggler:focus{
+    outline: none;
+    border: unset;
+    box-shadow: none;
+}
+.nav-link{
+    padding-top: 0.9375rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: white;
+    letter-spacing: 0.0625rem;
+}
+
+.nav-link .active:hover,
+.active{
+color: #fd8eaf;
+}
+.navigation-wrap .main-btn{
+    color: white;
+    margin: auto;
+}
+.navigation-wrap .main-btn::before,
+.navigation-wrap .main-btn::after{
+    background-color: transparent;
+}
+.navigation-wrap.scroll-on{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    box-shadow: 0 0.125rem 1.75rem 0 rgba(0,0, 0,0.09);
+    transition: al .15s ease-in-out;
+    
+}
+
+.navigation-wrap.scroll-on .nav-link:hover,
+.navigation-wrap.scroll-on .nav-link:active{
+    color:var(--primary-color);
+}
+/* 
+.navigation-wrap .scroll-on .main-btn{
+    color:var(--white-text-color);
+    margin: auto;
+}
+.navigation-wrap .scroll-on .main-btn:hover,
+.navigation-wrap .scroll-on .main-btn:active{
+    color: #fd8eaf;
+    background-color: black;
+} */
+
+/* =====================================
+          top-banner design
+===================================== */
+.hero-slider .carousel-caption{
+    text-align: left;
+    top: 50%;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    max-width: 1320px;
+    transform: translate(-75%, -35%);
+
+}
+.hero-slider .carousel-caption h2{
+    color: white;
+}
+.hero-slider .carousel-caption p{
+    color: white;
+}
+/* =====================================
+          about section design
+===================================== */
+.about-section .carousel-inner{
+    border-radius: 0 0 5rem;
+}
+.about-section .main-btn span,
+.style-section .main-btn span{
+    color: black;
+}
+.about-section .carousel-indicators{
+    margin-bottom: -2.5rem;
+}
+.about-section .carousel-indicators [data-bs-target]{
+width: 0.625rem;
+height: 0.625rem;
+border-radius: 50%;
+background-color: #fd8eaf;
+}
+
+/* rectangle & circle shape */
+.rectangle-shape,
+.circle-shape{
+    content: '';
+    border: 0.25rem solid;
+    border-bottom-color: #ef6d9f;
+    border-right-color: #ef6d9f;
+    border-top-color: #ee8d6d;
+    border-left-color: #ee8d6d;
+    background-image: -moz-linear-gradient(top,#ee8d6d 0%,#ef6d9f 100%);
+    background-image: -webkit-linear-gradient(top,#ee8d6d 0%,#ef6d9f 100%);
+    background-image: linear-gradient(to bottom,#ee8d6d 0%,#ef6d9f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$colorBtnPrimaryHover",endColorstr="$colorPrimary"),
+    gradientType=0;
+    background-size: 100% 0;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    margin: auto;
+
+
+}
+.rectangle-shape .small,
+.circle-shape .small{
+    width: 2.5rem;
+    height: 2.5rem;
+    animation: animationframes 35s alternate infinite linear;
+
+}
+.rectangle-shape .large,
+.circle-shape .large{
+    width: 1.5rem;
+    height: 1.5rem;
+    animation: animationframesthree 35s alternate infinite linear;
+    
+}
+/* =====================================
+          feature section design
+===================================== */
+
+.card{
+    cursor: pointer;
+}
+.card .icon{
+    box-shadow: 0.0625rem 0.25rem  1.25rem rgb(26 26 26 / 9%);
+    border-radius: 0;
+    padding: 1.25rem 0;
+    width: 5rem;
+    text-align: center;
+    height: auto;
+    margin-bottom: 2.5;
+    border-top-right-radius:1.5625rem ;
+
+}
+.card img
+{
+    display: block;
+    opacity: .75;
+    margin:0 auto;
+    filter: brightness(0);
+}
+.card img:hover{
+    filter: brightness(1);
+}
+.card:hover h4{
+    color: #ef6d9f;
+}
+/* =====================================
+         Chose section design
+===================================== */
+.choose h2::before,
+.contacts-section h2::before{
+    left: 47%;
+}
+.choose .card .product-star{
+    color: #9e9999;
+    font-size: 100%;
+}
+.choose .card a h4{
+    color: #1a1a1a;
+    display: inline-block;
+    font-size: 1.5rem;
+    width: 100%;
+    font-weight: 500;
+    margin: 0 0 0.93rem;
+    line-height: normal;
+}
+.choose .card:hover a h4{
+    color: #ef6d9f;
+}
+.choose .card .product-img{
+    width: 100%;
+    height: 21.125rem;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.choose .card:hover .product-img{
+    transition: all 0.3s;
+    transform: scale(1.1);
+}
+#zoom-img{
+    background-image: url(./images/images/img/Product1.jpg);
+}
+#zoom-img-2{
+    background-image: url(./images/images/img/Product2.jpg);
+}
+#zoom-img-3{
+    background-image: url(./images/images/img/Product3.jpg);
+}
+
+
+/* contact form design */
+form .form-group,
+form input{
+    box-shadow: 0.0625rem 0.25rem  1.25rem rgba(158, 61, 61, 0.07);
+    display: inline-block;
+    margin: 0 0.9375rem;
+    border-radius: 1.875rem;
+}
+form input[type=email],
+form input[type=text]{
+    display: inline-block;
+    padding: 0 1.5625rem;
+    height: 4.375rem;
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+    margin-bottom: 0;
+    border-radius: 1.875rem;
+    border: none;
+}
+
+.subscribe{
+    
+    width: auto;
+    display: inline-block;
+    height: 3.75rem;
+    padding: 0.3125rem 0.3125rem ;
+    border-radius: 1.875rem;
+    margin: 0.3125rem;
+    color: white;
+    background: #ef6d9f;
+    border: 0.625rem solid transparent;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1.25rem;
+    outline: 0;
+    transition: all .4s ease-in-out;
+}
+.footer{
+    background: black;
+}
+.footer-social{
+    color: white;
+    font-size: 1.5rem;
+    padding:   1rem;
+    letter-spacing: 1.5rem;
+}
+.footer .footer-social a :hover{
+    color: #ef6d9f;
+}
